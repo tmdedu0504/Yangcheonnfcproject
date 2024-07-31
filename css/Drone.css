@@ -1,0 +1,139 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+
+.App1Container {
+	max-width: 500px;
+	min-height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+	overflow-x: hidden;
+	/*background-color: #E8ECF7;*/
+	background-color: #edeef2;
+}
+
+.App2Container {
+	max-width: 500px;
+	min-height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+	overflow-x: hidden;
+	background-color: #edeef2;
+	background-image: linear-gradient(
+			90deg,
+			#c5deff 10%,
+			transparent 10%
+		),
+		linear-gradient(#c5deff 10%, transparent 10%);
+	background-size: 10px 10px;
+}
+.title1 {
+	-webkit-text-stroke: 3px #2349dc;
+	color: #edeef2;
+}
+
+#prev {
+	width: 80px;
+	height: 40px;
+	border: solid 2px white;
+	background-color: #2349dc;
+	border-radius: 30px;
+	text-align: center;
+	box-shadow: 0 0 0 1px #2349dc;
+	color: white;
+	filter: drop-shadow(0px 0px 2px #2349dc);
+}
+
+#prev:hover {
+	width: 80px;
+	height: 40px;
+	border: solid 2px #2349dc;
+	background-color: white;
+	border-radius: 30px;
+	text-align: center;
+	box-shadow: 0 0 0 1px white;
+	color: #2349dc;
+}
+
+#next {
+	width: 80px;
+	height: 40px;
+	border: solid 2px white;
+	background-color: #2349dc;
+	border-radius: 30px;
+	text-align: center;
+	box-shadow: 0 0 0 1px #2349dc;
+	color: white;
+	filter: drop-shadow(0px 0px 2px #2349dc);
+}
+
+#next:hover {
+	width: 80px;
+	height: 40px;
+	border: solid 2px #2349dc;
+	background-color: white;
+	border-radius: 30px;
+	text-align: center;
+	box-shadow: 0 0 0 1px white;
+	color: #2349dc;
+}
+
+@media (max-width: 500px) {
+	.App1Container {
+		width: 100%;
+		height: 100vh;
+	}
+
+	.App2Container {
+		width: 100%;
+		height: 100vh;
+	}
+}
+
+.message-l {
+	max-width: 210px;
+	box-sizing: border-box;
+	background-color: #ffeb33;
+	/*background-color: #FFEB33;*/
+	color: black;
+	border-radius: 0px 20px 20px 20px;
+	word-break: normal;
+	padding: 10px;
+}
+
+.message-r {
+	max-width: 210px;
+	box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #eeeeee;
+	color: #000;
+	border-radius: 20px 0px 20px 20px;
+	word-break: normal;
+	padding: 10px;
+}
+
+.dogprofile {
+	background-color: white;
+	width: 50px;
+	height: 50px;
+	border-radius: 10px;
+	border: white solid 3px;
+	filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1))
+		drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+}
+
+.sunprofile {
+	background-color: white;
+	width: 50px;
+	height: 50px;
+	border-radius: 10px;
+	border: white solid 3px;
+	filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1))
+		drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+}
+
+.hidden {
+	display: none;
+}

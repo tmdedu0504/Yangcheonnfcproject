@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>AI 로봇존</title>
+		<link rel="stylesheet" href="/css/font.css" />
+		<link rel="stylesheet" href="/css/Robot.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="/js/sidehtml.js" defer></script>
+	</head>
+	<body>
+		<div
+			class="App1Container run flex flex-col justify-center items-center px-[30px]"
+			id="offdisplay"
+		>
+			<div
+				class="flex flex-col items-center justify-between bg-white w-[300px] h-[450px] rounded-[20px] overflow-hidden"
+			>
+				<!--해우리 이미지-->
+				<div
+					class="flex flex-col items-center justify-center w-[160px] h-[180px] object-cover mt-[70px]"
+				>
+					<img
+						class="drop-shadow-lg"
+						src="../img/dogDrone.png"
+						alt=""
+					/>
+				</div>
+				<div class="mb-[20px] mt-[20px]">
+					<!--내용 1-->
+					<div
+						class="Nanumneo text-center text-[16px] mb-[25px] mt-[10px]"
+					>
+						해우리를 찾았다!
+					</div>
+					<!--선 hr -->
+					<div class="flex justify-center">
+						<hr
+							class="w-[250px] h-[1px] bg-[lightgrey] mb-[20px]"
+						/>
+					</div>
+					<!--확인 button-->
+					<div class="text-center text-[16px]">
+						<button
+							class="Nanumneo text-center w-[100px]"
+							onclick="offDisplay()"
+						>
+							확인
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="App2Container Contentfont relative flex flex-col items-center justify-center py-[50px] px-[30px] z-10 hidden"
+			id="ondisplay"
+		>
+			<div class="flex flex-col items-center">
+				<span class="run text-[#FE904C] text-[30px]"
+					>AI 로봇존</span
+				>
+				<span
+					class="title Titlefont text-[37px] drop-shadow-md"
+					>AI 프렌즈를 찾아서</span
+				>
+			</div>
+			<div class="flex flex-col items-center mt-[30px]">
+				<div
+					class="box flex flex-col justify-center Contentfont w-[310px] h-full bg-white rounded-[30px] py-[25px] px-[5px] drop-shadow-2xl"
+				>
+					<div id="messageall_1" class="messageall">
+						<div
+							class="flex items-start justify-start p-[10px]"
+						>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/dogprofile.png"
+								alt=""
+							/>
+							<div
+								class="flex flex-col items-start ml-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									해우리
+								</div>
+								<div
+									class="message-l flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span>안녕! 얘들아~!</span>
+									<span>나는 양천구 보안관👮🏻🚔</span>
+									<span
+										><b class="text-[#FE7D2E]">해우리</b
+										>야~🥰</span
+									>
+								</div>
+							</div>
+						</div>
+						<div
+							class="flex items-start justify-end py-[15px] px-[10px]"
+						>
+							<div
+								class="flex flex-col items-end mr-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									양천구 멋쟁이
+								</div>
+								<div
+									class="message-r flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span>오 안녕!! 반가워~ </span>
+									<span>오늘 하루 잘 부탁해!😊</span>
+									<span>여기는 뭐하는 곳이야?!</span>
+								</div>
+							</div>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/Sunflower01.png"
+								alt=""
+							/>
+						</div>
+						<div
+							class="flex items-start justify-start p-[10px]"
+						>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/dogprofile.png"
+								alt=""
+							/>
+							<div
+								class="flex flex-col items-start ml-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									해우리
+								</div>
+								<div
+									class="message-l flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span>음.. 궁금해?!</span>
+									<span>지금부터 소개해줄게😊</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- messageall_2 내용 -->
+					<div id="messageall_2" class="messageall hidden">
+						<div
+							class="flex items-start justify-start p-[10px]"
+						>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/dogprofile.png"
+								alt=""
+							/>
+							<div
+								class="flex flex-col items-start ml-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									해우리
+								</div>
+								<div
+									class="message-l flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span
+										>이 곳은
+										<b class="text-[#FE7D2E]">로봇친구들</b
+										>과 함께</span
+									>
+									<span>신나게 놀 수 있는 곳이야❣️</span>
+									<span
+										><b class="text-[#FE7D2E]">AI반려로봇</b
+										>과
+										<b class="text-[#FE7D2E]">로봇 팔</b
+										>,</span
+									>
+									<span
+										><b class="text-[#FE7D2E]">AI로봇댄스</b
+										>도 볼 수 있어😉</span
+									>
+								</div>
+							</div>
+						</div>
+						<div
+							class="flex items-start justify-end py-[15px] px-[10px]"
+						>
+							<div
+								class="flex flex-col items-end mr-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									양천구 멋쟁이
+								</div>
+								<div
+									class="message-r flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span>대박?! 너무 기대된다😮</span>
+									<span>로봇친구들과 어떻게 놀아?!</span>
+								</div>
+							</div>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/Sunflower01.png"
+								alt=""
+							/>
+						</div>
+						<div
+							class="flex items-start justify-start p-[10px]"
+						>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/dogprofile.png"
+								alt=""
+							/>
+							<div
+								class="flex flex-col items-start ml-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									해우리
+								</div>
+								<div
+									class="message-l flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span>궁금하구나~~✨👓</span>
+									<span>다음 버튼을 눌러봐‼️😝</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- messageall_3 내용 -->
+					<div id="messageall_3" class="messageall hidden">
+						<div
+							class="flex items-start justify-start p-[10px]"
+						>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/dogprofile.png"
+								alt=""
+							/>
+							<div
+								class="flex flex-col items-start ml-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									해우리
+								</div>
+								<div
+									class="message-l flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span>우리는 🤖로봇친구들🤖과</span>
+									<span
+										><b class="text-[#FE7D2E]"
+											>다양한 미션</b
+										>을 수행하면서</span
+									>
+									<span
+										><b class="text-[#FE7D2E]"
+											>AI 로봇 기술 원리</b
+										>를 배우고</span
+									>
+									<span
+										><b class="text-[#FE7D2E]"
+											>로봇의 동작</b
+										>을 확인할거야!</span
+									>
+									<span>완전 재밌겠지?!😉</span>
+								</div>
+							</div>
+						</div>
+						<div
+							class="flex items-start justify-end py-[15px] px-[10px]"
+						>
+							<div
+								class="flex flex-col items-end mr-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									양천구 멋쟁이
+								</div>
+								<div
+									class="message-r flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span>우와! 대박😮😮</span>
+									<span>로봇친구들을 빨리 보고싶어</span>
+									<span>너무 기대돼~~😍</span>
+								</div>
+							</div>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/Sunflower01.png"
+								alt=""
+							/>
+						</div>
+						<div
+							class="flex items-start justify-start p-[10px]"
+						>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/dogprofile.png"
+								alt=""
+							/>
+							<div
+								class="flex flex-col items-start ml-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									해우리
+								</div>
+								<div
+									class="message-l flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span>🚨주의할 점이 있어!🚨</span>
+									<span
+										>바로
+										<b class="text-[red]">❗안전❗</b
+										>이야</span
+									>
+									<span>오늘 하루 싸우지 말고❗</span>
+									<span>안전하게 체험하고 가자😊</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex justify-center mt-[40px]">
+					<div
+						class="flex flex-col items-center justify-center"
+					>
+						<button
+							id="prev"
+							class="flex items-center justify-center mx-[10px]"
+							style="display: none"
+						>
+							<span class="run">이전</span>
+						</button>
+					</div>
+					<div
+						class="flex flex-col items-center justify-center"
+					>
+						<button
+							id="next"
+							class="flex items-center justify-center bg-white w-[40px] h-[40px] mx-[10px]"
+						>
+							<span class="run">다음</span>
+						</button>
+					</div>
+				</div>
+				<div class="YangcheonLogo w-[50px] pt-[20px]">
+					<img src="/img/YangcheonLogo.png" alt="" />
+				</div>
+			</div>
+			<img
+				class="absolute z-[-1] top-[10px] left-[15px] w-[100px] drop-shadow"
+				src="/img/sun2.png"
+				alt=""
+			/>
+			<img
+				class="absolute z-[-1] top-[115px] right-[15px] w-[105px] drop-shadow"
+				src="/img/cloud.png"
+				alt=""
+			/>
+		</div>
+	</body>
+</html>

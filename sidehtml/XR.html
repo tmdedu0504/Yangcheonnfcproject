@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>XR 체험존</title>
+		<link rel="stylesheet" href="/css/font.css" />
+		<link rel="stylesheet" href="/css/XR.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="/js/sidehtml.js" defer></script>
+	</head>
+	<body>
+		<div
+			class="App1Container run flex flex-col justify-center items-center px-[30px]"
+			id="offdisplay"
+		>
+			<div
+				class="box2 flex flex-col items-center justify-between bg-white w-[300px] h-[450px] rounded-[20px] overflow-hidden"
+			>
+				<!--해우리 이미지-->
+				<div
+					class="flex flex-col items-center justify-center w-[200px] h-[300px] object-cover mt-[40px]"
+				>
+					<img
+						class="drop-shadow-lg"
+						src="../img/dogXR.png"
+						alt=""
+					/>
+				</div>
+				<div class="mb-[20px] mt-[20px]">
+					<!--내용 1-->
+					<div
+						class="Nanumneo text-center text-[16px] mb-[25px] mt-[10px]"
+					>
+						해우리를 찾았다!
+					</div>
+					<!--선 hr -->
+					<div class="flex justify-center">
+						<hr
+							class="w-[250px] h-[1px] bg-[lightgrey] mb-[20px]"
+						/>
+					</div>
+					<!--확인 button-->
+					<div class="text-center text-[16px]">
+						<button
+							class="Nanumneo text-center w-[100px]"
+							onclick="offDisplay()"
+						>
+							확인
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="App2Container flex flex-col Contentfont items-center justify-center py-[50px] px-[30px] hidden"
+			id="ondisplay"
+		>
+			<div class="flex flex-col items-center">
+				<span
+					class="semi-title run text-[#BCFF03] text-[30px]"
+					>XR 플레이존</span
+				>
+				<span class="title Titlefont text-[45px]"
+					>몬스터 아일랜드</span
+				>
+			</div>
+			<div class="flex flex-col items-center mt-[30px]">
+				<div
+					class="bosx2 flex flex-col justify-center Contentfont w-[310px] h-full bg-white rounded-[30px] py-[25px] px-[5px]"
+				>
+					<div id="messageall_1" class="messageall">
+						<div
+							class="flex items-start justify-start p-[10px]"
+						>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/dogprofile.png"
+								alt=""
+							/>
+							<div
+								class="flex flex-col items-start ml-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									해우리
+								</div>
+								<div
+									class="message-l flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span>안녕! 얘들아~!</span>
+									<span>나는 양천구 보안관👮🏻</span>
+									<span
+										><b class="text-[#BCFF03]">해우리</b
+										>야~😉</span
+									>
+								</div>
+							</div>
+						</div>
+						<div
+							class="flex items-start justify-end py-[15px] px-[10px]"
+						>
+							<div
+								class="flex flex-col items-end mr-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									양천구 멋쟁이
+								</div>
+								<div
+									class="message-r flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span>오 안녕!! 반가워~ </span>
+									<span>오늘 하루 잘 부탁해!🩷😊</span>
+								</div>
+							</div>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/Sunflower01.png"
+								alt=""
+							/>
+						</div>
+						<div
+							class="flex items-start justify-start p-[10px]"
+						>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/dogprofile.png"
+								alt=""
+							/>
+							<div
+								class="flex flex-col items-start ml-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									해우리
+								</div>
+								<div
+									class="message-l flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span>알았어~!</span>
+									<span
+										>지금부터
+										<b class="text-[#BCFF03]"
+											>몬스터 아일랜드</b
+										>를</span
+									>
+									<span>소개해줄게!😉⭐</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- messageall_2 내용 -->
+					<div id="messageall_2" class="messageall hidden">
+						<div
+							class="flex items-start justify-start p-[10px]"
+						>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/dogprofile.png"
+								alt=""
+							/>
+							<div
+								class="flex flex-col items-start ml-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									해우리
+								</div>
+								<div
+									class="message-l flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span>가상과 현실을 넘나드는</span>
+									<span
+										>이곳은
+										<b class="text-[#BCFF03]"
+											>몬스터 아일랜드</b
+										>야!</span
+									>
+									<span>🚨아주 아주 조심해🚨</span>
+								</div>
+							</div>
+						</div>
+						<div
+							class="flex items-start justify-end py-[15px] px-[10px]"
+						>
+							<div
+								class="flex flex-col items-end mr-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									양천구 멋쟁이
+								</div>
+								<div
+									class="message-r flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span>정말?! 조금 무서운 걸..😢</span>
+									<span>여기서는 어떤 체험을 해?!</span>
+								</div>
+							</div>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/Sunflower01.png"
+								alt=""
+							/>
+						</div>
+						<div
+							class="flex items-start justify-start p-[10px]"
+						>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/dogprofile.png"
+								alt=""
+							/>
+							<div
+								class="flex flex-col items-start ml-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									해우리
+								</div>
+								<div
+									class="message-l flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span>궁금하구나~~👓</span>
+									<span>다음 버튼을 눌러봐‼️😝</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- messageall_3 내용 -->
+					<div id="messageall_3" class="messageall hidden">
+						<div
+							class="flex items-start justify-start p-[10px]"
+						>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/dogprofile.png"
+								alt=""
+							/>
+							<div
+								class="flex flex-col items-start ml-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									해우리
+								</div>
+								<div
+									class="message-l flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span
+										>다양한
+										<b class="text-[#BCFF03]"
+											>스포츠 게임들</b
+										>과</span
+									>
+									<span
+										><b class="text-[#BCFF03]">XR</b>을 합친
+										게임을 할거야!</span
+									>
+									<span
+										><b class="text-[#BCFF03]">가상세계</b
+										>에서 하는거지!</span
+									>
+									<span>설레지?!😉</span>
+								</div>
+							</div>
+						</div>
+						<div
+							class="flex items-start justify-end py-[15px] px-[10px]"
+						>
+							<div
+								class="flex flex-col items-end mr-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									양천구 멋쟁이
+								</div>
+								<div
+									class="message-r flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span>우와! 대박😮😮</span>
+									<span>빨리 가상세계로 가고싶다!</span>
+									<span>너무 기대돼~~😍</span>
+								</div>
+							</div>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/Sunflower01.png"
+								alt=""
+							/>
+						</div>
+						<div
+							class="flex items-start justify-start p-[10px]"
+						>
+							<img
+								class="w-[50px] h-[50px] drop-shadow-lg"
+								src="/img/dogprofile.png"
+								alt=""
+							/>
+							<div
+								class="flex flex-col items-start ml-[10px]"
+							>
+								<div
+									class="kakao1name run text-[14px] mb-[5px]"
+								>
+									해우리
+								</div>
+								<div
+									class="message-l flex flex-col items-start p-[15px] text-[15px] drop-shadow leading-7"
+								>
+									<span>🚨주의할 점이 있어!🚨</span>
+									<span
+										>바로
+										<b class="text-[red]">❗안전❗</b
+										>이야</span
+									>
+									<span>이 곳은 특히 더 조심하자!</span>
+									<span>오늘 하루 싸우지 말고❗</span>
+									<span>안전하게 체험하고 가자😊</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex justify-center mt-[40px]">
+					<div
+						class="flex flex-col items-center justify-center"
+					>
+						<button
+							id="prev"
+							class="flex items-center justify-center mx-[10px]"
+							style="display: none"
+						>
+							<span class="run">이전</span>
+						</button>
+					</div>
+					<div
+						class="flex flex-col items-center justify-center"
+					>
+						<button
+							id="next"
+							class="flex items-center justify-center bg-white w-[40px] h-[40px] mx-[10px]"
+						>
+							<span class="run">다음</span>
+						</button>
+					</div>
+				</div>
+				<div class="YangcheonLogo w-[50px] pt-[20px]">
+					<img src="/img/YangcheonLogo.png" alt="" />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

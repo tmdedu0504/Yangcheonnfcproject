@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>DroneQuiz</title>
+		<link rel="stylesheet" href="/css/font.css" />
+		<link rel="stylesheet" href="/css/AI_Quiz.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="/js/AIQuiz.js" defer></script>
+	</head>
+	<body class="bg-white">
+		<!-- App0Container -->
+		<div
+			id="App0Container"
+			class="App0Container flex flex-col items-center justify-center p-[30px]"
+		>
+			<div class="flex flex-col items-center">
+				<span
+					class="Titlefont text-[#E88E7F] text-[30px] drop-shadow-xl"
+					>해우리와 함께하는</span
+				>
+				<span
+					class="Titlefont title1 text-[50px] drop-shadow-xl"
+					>'드론 퀴즈'</span
+				>
+			</div>
+			<div class="w-[200px] my-[40px]">
+				<img src="/img/dogAI.png" alt="" />
+			</div>
+			<button id="QuizStart" class="quizstart run">
+				OX 퀴즈 풀기 >
+			</button>
+		</div>
+		<!-- App1Container -->
+		<div
+			id="App1Container"
+			class="App1Container flex flex-col items-center justify-center p-[30px] hidden"
+		>
+			<div class="flex flex-col items-center">
+				<div class="flex justify-center m-[10px]">
+					<div
+						class="bg-[url('../img/dogRobot.png')] bg-contain bg-no-repeat w-[90px] h-[90px] drop-shadow-md"
+					></div>
+				</div>
+				<div class="text-center pb-[10px]">
+					<span
+						class="Titlefont title1 text-[50px] z-10 drop-shadow-2xl"
+						>드론 OX QUIZ</span
+					>
+				</div>
+				<div
+					class="bg-[#FBECE9] border-white border-solid border-[10px] p-[20px] rounded-[20px] drop-shadow-xl"
+				>
+					<div class="text-center mb-[1px]">
+						<div
+							class="Quiz run text-center text-[20px] text-[#F5CEC7]]"
+						>
+							Quiz
+						</div>
+					</div>
+					<div class="text-center">
+						<div
+							id="question"
+							class="run text-[20px] text-[#E88E7F]"
+						>
+							오늘 수업에서 배운 로봇 중<br /><b>AI 로봇</b
+							>이 있다.
+						</div>
+					</div>
+					<div
+						class="flex flex-row items-center justify-center mt-[40px] mb-[35px]"
+					>
+						<div id="OButtonContainer">
+							<button
+								id="OButton"
+								class="OBtn flex justify-center items-center w-[130px] h-[100px] rounded-[25px] mx-[10px] drop-shadow-md"
+							>
+								<img
+									class="w-[60px] h-[60px]"
+									src="/img/OIcon.png"
+									alt=""
+								/>
+							</button>
+						</div>
+						<div id="XButtonContainer">
+							<button
+								id="XButton"
+								class="XBtn flex justify-center items-center w-[130px] h-[100px] rounded-[25px] mx-[10px] drop-shadow-md"
+							>
+								<img
+									class="w-[55px] h-[55px]"
+									src="/img/XIcon.webp.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div
+						id="answer1"
+						class="Answer1 flex flex-row items-center justify-center hidden bg-white w-[300px] mt-[20px] p-[20px] rounded-[30px] drop-shadow-md"
+					>
+						<div>
+							<img
+								class="h-[90px]"
+								src="/img/dog_best.png"
+								alt=""
+							/>
+						</div>
+						<div class="Right">
+							<div class="run ml-[20px]">
+								짝짝짝! 정답이에요.
+							</div>
+							<div class="run ml-[20px]">
+								다음 문제를 풀어볼까요?
+							</div>
+						</div>
+					</div>
+					<div
+						id="answer2"
+						class="Answer2 flex flex-row items-center justify-center hidden bg-white w-[300px] mt-[20px] p-[20px] rounded-[30px] drop-shadow-md"
+					>
+						<div>
+							<img
+								class="h-[90px]"
+								src="/img/dogDrone.png"
+								alt=""
+							/>
+						</div>
+						<div class="Wrong">
+							<div class="run ml-[20px]">
+								아쉽네요ㅜㅜ! 오답이에요.
+							</div>
+							<div class="run ml-[20px]">
+								다음 문제를 풀어볼까요?
+							</div>
+						</div>
+					</div>
+					<div
+						id="answerfin1"
+						class="flex items-center justify-center hidden bg-white w-[300px] mt-[20px] p-[20px] rounded-[30px] drop-shadow-md"
+					>
+						<div>
+							<img
+								class="h-[90px]"
+								src="/img/dog_best.png"
+								alt=""
+							/>
+						</div>
+						<div class="run ml-[20px]">
+							짝짝짝! 정답이에요.
+						</div>
+					</div>
+					<div
+						id="answerfin2"
+						class="flex items-center justify-center hidden bg-white w-[300px] mt-[20px] p-[20px] rounded-[30px] drop-shadow-md"
+					>
+						<div>
+							<img
+								class="h-[90px]"
+								src="/img/dogDrone.png"
+								alt=""
+							/>
+						</div>
+						<div class="run ml-[20px]">
+							아쉽네요ㅜㅜ! 오답이에요.
+						</div>
+					</div>
+					<div class="run flex justify-center mt-[30px]">
+						<button
+							id="nextButton"
+							class="flex items-center justify-center hidden"
+						>
+							다음 >
+						</button>
+					</div>
+				</div>
+				<div class="YangcheonLogo w-[50px] pt-[20px]">
+					<img src="/img/YangcheonLogo.png" alt="" />
+				</div>
+			</div>
+		</div>
+		<!-- App2Container -->
+		<div
+			id="App2Container"
+			class="App2Container flex justify-center items-center p-[30px] hidden"
+		>
+			<div class="flex flex-col items-center">
+				<span class="Titlefont text-[#E88E7F] text-[30px]"
+					>드론 QUIZ</span
+				>
+				<span
+					class="Titlefont title1 text-[40px] z-10 drop-shadow-sm"
+					>🎉미션 클리어🎉</span
+				>
+				<img
+					class="h-[300px] drop-shadow-md drop-shadow-2xl mt-[30px]"
+					src="/img/dogproud.png"
+					alt=""
+				/>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.App1Container {
+    max-width: 500px;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+    /*background-color: #E8ECF7;*/
+    background-color: #07243E;
+}
+
+.box1{
+    filter: drop-shadow(0px 0px 2px white);
+}
+
+.App2Container{
+    max-width: 500px;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+    background-color: #07243E;
+    background-image: linear-gradient(90deg, #2D5375 5%, transparent 5%), linear-gradient(#2D5375 5%, transparent 5%);
+    background-size: 15px 15px;
+}
+
+.semi-title{
+    filter: drop-shadow(0px 0px 1px #BCFF03);
+}
+
+.title {
+    -webkit-text-stroke: 2px #BCFF03;
+    color: #07243E;
+    filter: drop-shadow(0px 0px 2px #BCFF03);
+}
+
+.box2 {
+    filter: drop-shadow(0px 0px 2px white);
+}
+
+#prev {
+    width: 80px;
+    height: 40px;
+    border: solid 2px #07243E;
+    background-color: #BCFF03;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 0 0 1px #BCFF03;
+    color: #07243E;
+    filter: drop-shadow(0px 0px 2px #BCFF03);
+}
+
+#prev:hover {
+    width: 80px;
+    height: 40px;
+    border: solid 2px #BCFF03;
+    background-color: #07243E;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 0 0 1px #07243E;
+    color: #BCFF03;
+}
+
+#next {
+    width: 80px;
+    height: 40px;
+    border: solid 2px #07243E;
+    background-color: #BCFF03;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 0 0 1px #BCFF03;
+    color: #07243E;
+    filter: drop-shadow(0px 0px 2px #BCFF03);
+}
+
+#next:hover {
+    width: 80px;
+    height: 40px;
+    border: solid 2px #BCFF03;
+    background-color: #07243E;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 0 0 1px #07243E;
+    color: #BCFF03;
+}
+
+
+@media (max-width: 500px) {
+    .App1Container {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .App2Container{
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+.message-l {
+    max-width: 210px;
+    box-sizing: border-box;
+    background-color: #07243E;
+    /*background-color: #FFEB33;*/
+    color: white;
+    border-radius: 0px 20px 20px 20px;
+    word-break: normal;
+    padding: 10px;
+}
+
+.message-r {
+    max-width: 210px;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #EEEEEE;
+    color: #000;
+    border-radius: 20px 0px 20px 20px;
+    word-break: normal;
+    padding: 10px;
+}
+
+.dogprofile {
+    background-color: white;
+    width:50px;
+    height: 50px;
+    border-radius: 10px;
+    border: white solid 3px;
+    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+    
+}
+
+.sunprofile {
+    background-color: white;
+    width:50px;
+    height: 50px;
+    border-radius: 10px;
+    border: white solid 3px;
+    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+}
+
+.hidden { 
+    display: none; 
+}
